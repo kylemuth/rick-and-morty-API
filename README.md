@@ -10,8 +10,10 @@ In this application I used the poster images of the first five Star Wars movies 
 
 ## Lessons Learned:
 
-### Having an event listener listen for the same class that is applied across multiple HTML tags
+### ~~Having an event listener listen for the same class that is applied across multiple HTML tags~~
 
-In order to do so there are a number of ways to solve this problem. One would be to create a function that loops over all HTML elements and determining which ones possess a certain class that you have specified.
+### Update: Determined another way to implement event handler when choosing a movie
 
-Then, to control the state of whether or not a certain button is selected we can assign a boolean value and check if that value is true or false to determine which specific button is selected. In order to do so, though, we must ensure that after every time a button is selected we remove said boolean value unless we click on an already selected button.
+Instead of creating a function that would cycle through HTML elements searching for a specific class, I decided to implement an event listener that listens for a click across the window element.
+
+Once a user clicks, we store the PointEvent path into a variable and determine the ID of the selected element. Since ID's should be unique to a single element, we are able to determine which of the movies a user has selected.
