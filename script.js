@@ -1,46 +1,35 @@
 "use strict";
 
-let movieNumber;
+const card = document.querySelectorAll(".card");
 
-// fetching data using SWAPI API
-const getSomeData = async function () {
+const randomNum = function () {
+  const number = Math.trunc(Math.random() * 18) + 1;
+  return number;
+  console.log(number);
+};
+
+randomNum();
+
+// fetching data using Rick and Morty API
+const updateCards = async function () {
   const res = await fetch(
-    `https://cors-anywhere.herokuapp.com/https://swapi.dev/api/people/1/`
+    `https://rickandmortyapi.com/api/character/${randomNum()}`
   );
   const data = await res.json();
   console.log(data);
 
   const markup = `
-  <h2>Planet name: ${data.name}</h2>
+  <h2>Name: ${data.name}</h2>
+  <h2>Status: ${data.status}</h2>
+  <h2>Species: ${data.species}</h2>
+  <h2>Gender: ${data.gender}</h2>
+  <img src = "${data.image}">
   `;
 
-  document.querySelector(".first-text").insertAdjacentHTML("beforeend", markup);
+  for (let i = 0; i < card.length; i++) {
+    card[i].textContent = "";
+    card[i].insertAdjacentHTML("afterbegin", markup);
+  }
 };
 
-getSomeData();
-
-// using fetched data in order to display
-// const addSelected = function () {
-//   document.querySelector(".btn").addEventListener("click", function () {
-//     document.querySelector(".episode1").classList.add("selected");
-//     document.querySelector(".episode1class").style.scale = 1.3;
-//   });
-// };
-
-// addSelected();
-
-const determineSelected = function () {
-  window.addEventListener("click", function (e) {
-    // This logs to the console a "PointerEvent"
-    console.log(e);
-
-    const movieTitle = e.path[2].id;
-    console.log(movieTitle);
-
-    if (movieTitle === "episode1") {
-      movieNumber = 1;
-    } else return;
-  });
-};
-
-determineSelected();
+updateCards();
