@@ -1,0 +1,19 @@
+{
+  "name": "rickandmorty",
+  "version": "1.0.0",
+  "description": "rick and morty API practice",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylemuth/rick-and-morty-API.git"
+  },
+  "author": "Kyle Muth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kylemuth/rick-and-morty-API/issues"
+  },
+  "homepage": "https://github.com/kylemuth/rick-and-morty-API#readme"
+}

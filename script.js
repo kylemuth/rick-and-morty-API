@@ -1,5 +1,7 @@
 "use strict";
 
+import markup from "url:./script.js";
+
 const card = document.querySelector(".card");
 const cards = document.querySelectorAll(".card");
 
@@ -19,7 +21,7 @@ const updateCards = async function () {
   );
   const data = await res.json();
 
-  const markup = `
+  export const markup = `
   <h2>Name: ${data.name}</h2>
   <h2>Status: ${data.status}</h2>
   <h2>Species: ${data.species}</h2>
