@@ -42,17 +42,24 @@ section {
 }
 
 .card {
+  font-family: "Zen Dots", cursive;
+  font-size: 13px;
   height: 90%;
-  width: 18em;
+  width: 15%;
   background-color: rgba(137, 43, 226, 0.705);
   border-radius: 20px;
   padding: 10px;
-  color: rgba(255, 255, 255, 0.753);
+  color: rgba(0, 0, 0, 0.6);
   box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.535);
+  transition: all 0.6s;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card h2 {
-  padding: 4px 0;
+  padding: 8px 0;
 }
 
 .card img {
