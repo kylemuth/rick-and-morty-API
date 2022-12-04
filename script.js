@@ -1,6 +1,6 @@
 "use strict";
 
-import markup from "url:./script.js";
+import markup from "url:script.js";
 
 const card = document.querySelector(".card");
 const cards = document.querySelectorAll(".card");
