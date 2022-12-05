@@ -1,19 +1,15 @@
-# SWAPI API Practice
+# Rick and Morty API Practice
 
 ---
 
 ## Scope of Project:
 
-In this application I used the poster images of the first five Star Wars movies as clickable buttons that allow you to see information pertaining to each specific movie using the SWAPI API.
+For this project I utilized the Rick and Morty API to randomly generate a character with some general information.
 
 ---
 
 ## Lessons Learned:
 
-### ~~Having an event listener listen for the same class that is applied across multiple HTML tags~~
+### The peace of mind that refactoring code brings
 
-### Update: Determined another way to implement event handler when choosing a movie
-
-Instead of creating a function that would cycle through HTML elements searching for a specific class, I decided to implement an event listener that listens for a click across the window element.
-
-Once a user clicks, we store the PointEvent path into a variable and determine the ID of the selected element. Since ID's should be unique to a single element, we are able to determine which of the movies a user has selected.
+At this point in time I still need to go back and refactor the JavaScript portion of this code. The main problem that I ran into with this project was cycling through each card and generating a different character versus applying the same character to every single card. This is why the same function is repeated over and over for each card versus having a succinct code block that executes the same function across each individual card.
